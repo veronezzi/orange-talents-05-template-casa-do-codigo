@@ -17,10 +17,10 @@ public class Autor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotBlank
+	@NotBlank(message = "Nome é necessario")
 	private String nome;
 	@NotBlank
-	@Email
+	@Email(message = "E-mail invalido")
 	private String email;
 	@NotBlank
 	@Size(max = 400)

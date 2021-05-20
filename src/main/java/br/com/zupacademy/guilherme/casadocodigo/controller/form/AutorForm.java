@@ -9,7 +9,7 @@ import javax.validation.constraints.Email;
 
 public class AutorForm {
 
-	@NotBlank
+	@NotBlank(message = "Nome é necessario")
 	private String nome;
 	@NotBlank
 	@Email
