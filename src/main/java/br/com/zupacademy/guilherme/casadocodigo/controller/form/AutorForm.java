@@ -3,6 +3,7 @@ package br.com.zupacademy.guilherme.casadocodigo.controller.form;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import br.com.zupacademy.guilherme.casadocodigo.config.validacao.UniqueValue;
 import br.com.zupacademy.guilherme.casadocodigo.modelo.Autor;
 
 import javax.validation.constraints.Email;
@@ -13,6 +14,7 @@ public class AutorForm {
 	private String nome;
 	@NotBlank
 	@Email
+	@UniqueValue(domainClass = Autor.class, fieldName = "email")
 	private String email;
 	@NotBlank
 	@Size(max = 400)
