@@ -63,6 +63,40 @@ public class Livro {
 	public String getTitulo() {
 		return titulo;
 	}
+	
+	
+
+	public String getResumo() {
+		return resumo;
+	}
+
+	public String getSumario() {
+		return sumario;
+	}
+
+	public BigDecimal getPreço() {
+		return preço;
+	}
+
+	public int getNumeroDePaginas() {
+		return numeroDePaginas;
+	}
+
+	public String getIsbn() {
+		return isbn;
+	}
+
+	public LocalDate getDataPublicacao() {
+		return dataPublicacao;
+	}
+
+	public Autor getAutor() {
+		return autor;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
 
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;

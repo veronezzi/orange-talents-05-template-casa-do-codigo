@@ -11,4 +11,9 @@ public interface LivrosIdAndTituloRepository extends JpaRepository<Livro, Long >
 	
 	 @Query("select s.id, s.titulo from Livro s")
 	    List<Object> getLivroIdAndName();
+	 
+	 
+	 
 }
+
+

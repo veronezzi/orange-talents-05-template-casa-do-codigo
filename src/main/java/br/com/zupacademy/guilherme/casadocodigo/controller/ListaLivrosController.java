@@ -23,7 +23,7 @@ public class ListaLivrosController {
 
 	@GetMapping
 	@Transactional
-	public List<Object> getSchool() {
+	public List<Object> listarLivros() {
 	    List<Object> livros = LivrosRepository.getLivroIdAndName();
 	    return livros;
 	}
