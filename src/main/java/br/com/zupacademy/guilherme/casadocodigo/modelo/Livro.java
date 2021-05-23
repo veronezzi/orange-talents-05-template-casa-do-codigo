@@ -36,11 +36,9 @@ public class Livro {
 	@ManyToOne
 	private @Valid Categoria categoria;
 
-	
-
 	public Livro(@NotBlank String titulo, @NotBlank @Size(max = 500) String resumo, @NotBlank String sumario,
 			@Min(20) BigDecimal preço, @Min(100) int numeroDePaginas, @NotBlank String isbn,
-			@Future LocalDate dataPublicacao,@NotNull @Valid Autor autor,@NotNull @Valid Categoria categoria) {
+			@Future LocalDate dataPublicacao, @NotNull @Valid Autor autor, @NotNull @Valid Categoria categoria) {
 		this.titulo = titulo;
 		this.resumo = resumo;
 		this.sumario = sumario;
@@ -51,21 +49,29 @@ public class Livro {
 		this.autor = autor;
 		this.categoria = categoria;
 		// TODO Auto-generated constructor stub
-		
+
 	}
-	
-	
 
+	public Long getId() {
+		return id;
+	}
 
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
 	public Livro() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-
-
 
 	@Override
 	public String toString() {
