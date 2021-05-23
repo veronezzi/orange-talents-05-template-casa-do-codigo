@@ -31,8 +31,16 @@ public class Autor {
 		this.nome = nome;
 		this.email = email;
 		this.descricao = descricao;
-
 	}
+	
+	
+
+	public Autor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	@Override
 	public String toString() {

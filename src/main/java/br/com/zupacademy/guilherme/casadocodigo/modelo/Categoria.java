@@ -20,6 +20,15 @@ public class Categoria {
 		super();
 		this.nome = nome;
 	}
+	
+	
+
+	public Categoria() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	@Override
 	public String toString() {
