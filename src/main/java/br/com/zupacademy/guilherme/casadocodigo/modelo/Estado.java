@@ -10,6 +10,8 @@ import javax.validation.constraints.NotBlank;
 
 import com.sun.istack.NotNull;
 
+import br.com.zupacademy.guilherme.casadocodigo.config.validacao.UniqueValue;
+
 @Entity
 public class Estado {
 
@@ -19,11 +21,15 @@ public class Estado {
 	@NotBlank
 	private String nome;
 	@NotNull
-	@Valid
 	@ManyToOne
 	private Pais pais;
+	
+	@Deprecated
+	public Estado() {
+		
+	}
 
-	public Estado(@NotBlank String nome, @NotNull @Valid Pais pais) {
+	public Estado(@NotBlank String nome, @NotNull Pais pais) {
 		this.nome = nome;
 		this.pais = pais;
 	}
@@ -33,5 +39,8 @@ public class Estado {
 		return "Estado [id=" + id + ", nome=" + nome + ", pais=" + pais + "]";
 	}
 
+	public boolean pertenceAPais(Pais pais) {
+		return this.pais.equals(pais);
+	}
 	
 }

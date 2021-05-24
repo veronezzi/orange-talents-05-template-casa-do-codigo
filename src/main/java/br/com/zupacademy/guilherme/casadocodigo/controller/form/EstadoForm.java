@@ -18,12 +18,21 @@ public class EstadoForm {
 	//@UniqueValue(domainClass = Pais.class, fieldName = "id")
 	private Long idPais;
 
-	public EstadoForm(@NotBlank String nome, Long idPais) {
+	public EstadoForm(@NotBlank String nome,@NotNull Long idPais) {
 		super();
 		this.nome = nome;
 		this.idPais = idPais;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "EstadoForm [nome=" + nome + ", idPais=" + idPais + "]";
+	}
+
+
+
 	public Estado toModel(EntityManager manager) {
 		return new Estado(nome,manager.find(Pais.class, idPais));
 	}

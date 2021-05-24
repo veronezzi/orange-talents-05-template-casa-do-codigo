@@ -16,7 +16,7 @@ import javax.validation.Payload;
 @Retention(RUNTIME)
 public @interface IdUnico {
 
-String message() default "Esse campo possui um Id duplicado favor realizar a alteração.";
+String message() default "Esse campo não possui um id cadastrado favor realizar a alteração.";
 	
 	Class<?>[] groups() default {};
 
